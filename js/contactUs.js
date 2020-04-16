@@ -12,7 +12,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-
+ 
 
 var contactForm = document.getElementById('contactForm');
 var mes = document.getElementById('mes')

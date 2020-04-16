@@ -44,6 +44,38 @@ h6 {
   font-weight: 600;
   color: #222222; }
 
+  #defaultText{
+    display:block
+
+  }
+  #successMessage{
+    display:none;
+    color:green;
+  }
+  #loader{
+    display:none;
+    position:relative;
+    
+  }
+  #mes{
+    display: none;
+  }
+  #major{
+    display:none;
+    color:green
+  }
+  #minor{
+    display:block;
+  }
+
+  #major2{
+    display:none;
+    color:green
+  }
+  #minor2{
+    display:block;
+  }
+
 .list {
   list-style: none;
   margin: 0px;

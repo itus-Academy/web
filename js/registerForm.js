@@ -15,6 +15,8 @@ const db = firebase.firestore();
 
 var registerForm = document.getElementById('registerForm');
 var successMessage = document.getElementById('successMessage');
+var loader = document.getElementById('loader');
+var buta = document.getElementById('buta')
 
 registerForm.addEventListener('submit', regForm);
 
@@ -29,12 +31,17 @@ function saveRegistrationForm(fullname,phone,address,serviceRequired,incentive){
             incentive:incentive
 
         }).then(()=>{
+
             successMessage.style.display= 'block';
             defaultText.style.display = 'none';
+
             console.log("this was succeeful")
             registerForm.reset();
+            loader.style.display = 'none';
+            buta.style.display = 'block';
+            
         })
-}
+} 
  
 function regForm(e){
 
@@ -48,6 +55,8 @@ function regForm(e){
     
     const incentives = document.getElementById('incentive')
     var incentive = incentives.options[incentives.selectedIndex].value;
+    loader.style.display= 'block';
+    buta.style.display = 'none'
 
     saveRegistrationForm(fullname,phone,address,serviceRequired,incentive);
     
